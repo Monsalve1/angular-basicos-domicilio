@@ -1,0 +1,19 @@
+<H1>MENU COMPLETO</H1>
+
+<ul>
+    <li *ngFor="let menu of Comidas">
+            {{menu}}
+    </li>
+
+</ul>
+
+<button (click)="MenuBorrado()">Borrar Comida</button>
+
+<div>
+    <h3 *ngIf=" borrado; else noBorrado ">Menu Borrado:<Small>{{borrado}}</Small></h3>
+</div>
+
+<ng-template #noBorrado>
+    <h4>No se ha eliminado nngun Menu</h4>
+</ng-template>
+
